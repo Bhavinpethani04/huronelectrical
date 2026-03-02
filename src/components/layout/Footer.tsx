@@ -147,7 +147,18 @@ export function Footer() {
       <div className="relative border-t border-white/5 py-4 sm:py-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-white/20">
           <p>© {new Date().getFullYear()} Huron Electrical. All rights reserved.</p>
-          <p>Licensed Electrical Contractor · Ontario, Canada</p>
+        </div>
+        {/* Developer credit */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 mt-2 flex justify-center">
+          <a
+            href="https://bhavinpethani04.github.io/bhavin-pethani/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[11px] text-white/20 hover:text-[#06B6D4] transition-colors duration-200 tracking-wide"
+          >
+            Design &amp; Developed by{' '}
+            <span className="font-semibold text-white/35 hover:text-[#06B6D4]">Bhavin Pethani</span>
+          </a>
         </div>
       </div>
     </footer>
