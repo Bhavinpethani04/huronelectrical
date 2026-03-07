@@ -76,18 +76,18 @@ export function WhyChoose() {
                 <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em]">Our Commitment</p>
                 <blockquote className="text-white text-xl sm:text-2xl font-black leading-snug tracking-tight">
                   "Licensed. Reliable.<br />
-                  <span className="text-[#06B6D4]">On time.</span> Every time."
+                  <span className="text-[#2563EB]">On time.</span> Every time."
                 </blockquote>
                 <div className="h-px bg-white/10" />
                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   {[
-                    { val: '15+', label: 'Years Experience' },
-                    { val: '200km', label: 'Service Radius' },
+                    { val: '4+', label: 'Years Experience' },
+                    { val: 'EV', label: 'Charger Install' },
                     { val: '24/7', label: 'Emergency Line' },
                     { val: 'ESA', label: 'Licensed #7018628' },
                   ].map(stat => (
                     <div key={stat.label} className="bg-white/5 border border-white/8 rounded-xl sm:rounded-2xl px-3 sm:px-4 py-3 sm:py-4">
-                      <p className="text-[#06B6D4] font-black text-lg sm:text-xl">{stat.val}</p>
+                      <p className="text-[#2563EB] font-black text-lg sm:text-xl">{stat.val}</p>
                       <p className="text-white/40 text-xs mt-0.5 sm:mt-1">{stat.label}</p>
                     </div>
                   ))}

@@ -29,11 +29,11 @@ export function Contact() {
           className={`mb-8 sm:mb-12 lg:mb-14 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
         >
           <div className="flex items-center gap-2.5 mb-2.5 sm:mb-3">
-            <div className="w-1 h-5 bg-[#06B6D4] rounded-full" />
-            <span className="text-[#06B6D4] text-xs font-bold uppercase tracking-[0.25em]">Get In Touch</span>
+            <div className="w-1 h-5 bg-[#2563EB] rounded-full" />
+            <span className="text-[#2563EB] text-xs font-bold uppercase tracking-[0.25em]">Get In Touch</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight tracking-tight">
-            Request a <span className="text-[#06B6D4]">Free Quote</span>
+            Request a <span className="text-[#2563EB]">Free Quote</span>
           </h2>
           <p className="text-white/40 text-sm sm:text-base lg:text-lg mt-2.5 sm:mt-3">Tell us about your project — we'll get back to you within 24 hours.</p>
         </div>
@@ -45,8 +45,8 @@ export function Contact() {
             {submitted ? (
               <div className="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-8 sm:p-14 text-center">
                 <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#2563EB]/20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5 border border-[#2563EB]/30">
-                  <CheckCircle size={28} className="text-[#06B6D4] sm:hidden" />
-                  <CheckCircle size={32} className="text-[#06B6D4] hidden sm:block" />
+                  <CheckCircle size={28} className="text-[#2563EB] sm:hidden" />
+                  <CheckCircle size={32} className="text-[#2563EB] hidden sm:block" />
                 </div>
                 <h3 className="text-white font-black text-xl sm:text-2xl mb-2">Message Sent!</h3>
                 <p className="text-white/40 text-sm">Thanks for reaching out. We'll get back to you within 24 hours.</p>
@@ -92,7 +92,7 @@ export function Contact() {
                 </div>
 
                 <button type="submit" disabled={isSubmitting}
-                  className="w-full flex items-center justify-center gap-2.5 bg-[#06B6D4] text-white font-black py-4 rounded-2xl hover:bg-[#0891B2] transition-all disabled:opacity-60 cursor-pointer text-base shadow-lg shadow-cyan-500/25 hover:-translate-y-0.5 min-h-[52px]">
+                  className="w-full flex items-center justify-center gap-2.5 bg-[#2563EB] text-white font-black py-4 rounded-2xl hover:bg-[#1D4ED8] transition-all disabled:opacity-60 cursor-pointer text-base shadow-lg shadow-blue-500/25 hover:-translate-y-0.5 min-h-[52px]">
                   {isSubmitting ? 'Sending...' : <><Send size={17} /> Send Message</>}
                 </button>
 
@@ -108,17 +108,17 @@ export function Contact() {
               {[
                 { icon: Phone, label: 'Phone', value: COMPANY.phone, href: `tel:${COMPANY.phone}` },
                 { icon: Mail, label: 'Email', value: COMPANY.email, href: `mailto:${COMPANY.email}` },
-                { icon: MapPin, label: 'Service Area', value: 'Kitchener–Waterloo & 200km radius', href: undefined },
+                { icon: MapPin, label: 'Service Area', value: 'Kitchener–Waterloo & Cambridge', href: undefined },
                 { icon: Clock, label: 'Hours', value: 'Mon–Fri: 7am–6pm · Emergency: 24/7', href: undefined },
               ].map(({ icon: Icon, label, value, href }) => (
                 <div key={label} className="flex items-center gap-3 sm:gap-4 bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl px-4 sm:px-5 py-3.5 sm:py-4 min-h-[60px]">
                   <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#2563EB]/20 border border-[#2563EB]/25 flex items-center justify-center shrink-0">
-                    <Icon size={15} className="text-[#06B6D4]" />
+                    <Icon size={15} className="text-[#2563EB]" />
                   </div>
                   <div className="min-w-0">
                     <p className="text-white/35 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider">{label}</p>
                     {href
-                      ? <a href={href} className="text-white font-semibold text-xs sm:text-sm hover:text-[#06B6D4] transition-colors truncate block">{value}</a>
+                      ? <a href={href} className="text-white font-semibold text-xs sm:text-sm hover:text-[#2563EB] transition-colors truncate block">{value}</a>
                       : <p className="text-white font-semibold text-xs sm:text-sm">{value}</p>
                     }
                   </div>

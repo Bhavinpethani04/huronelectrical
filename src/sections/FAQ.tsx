@@ -66,7 +66,7 @@ export function FAQ() {
             <div className="bg-[#050D1F] rounded-2xl p-5 sm:p-6 mt-2 sm:mt-6 relative overflow-hidden">
               <div className="absolute inset-0 bg-blueprint-grid opacity-40" />
               <div className="relative">
-                <MessageCircle size={20} className="text-[#06B6D4] mb-2.5 sm:mb-3" />
+                <MessageCircle size={20} className="text-[#2563EB] mb-2.5 sm:mb-3" />
                 <p className="text-white font-bold text-sm mb-1">Still have questions?</p>
                 <p className="text-white/40 text-xs mb-4">We're happy to help — reach out any time.</p>
                 <button

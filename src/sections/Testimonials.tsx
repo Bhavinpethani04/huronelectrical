@@ -69,7 +69,7 @@ export function Testimonials() {
             <div className="flex items-center gap-1 md:justify-end mb-1">
               {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#2563EB" className="text-[#2563EB]" />)}
             </div>
-            <p className="text-slate-500 text-sm">5.0 · 2,500+ satisfied customers</p>
+            <p className="text-slate-500 text-sm">5.0 · 50+ satisfied customers</p>
           </div>
         </div>
 
@@ -90,7 +90,7 @@ export function Testimonials() {
                 <p className="text-white/40 text-xs sm:text-sm">{featured.location} · {featured.service}</p>
               </div>
               <div className="ml-auto hidden sm:flex items-center gap-1">
-                {[...Array(featured.rating)].map((_, i) => <Star key={i} size={14} fill="#06B6D4" className="text-[#06B6D4]" />)}
+                {[...Array(featured.rating)].map((_, i) => <Star key={i} size={14} fill="#2563EB" className="text-[#2563EB]" />)}
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@ export function Testimonials() {
           <div className="bg-[#2563EB] rounded-2xl p-5 sm:p-6 flex flex-col justify-between min-h-[180px]">
             <div>
               <p className="text-white font-black text-base sm:text-lg leading-tight mb-2">
-                Ready to join 2,500+ happy customers?
+                Ready to join 50+ happy customers?
               </p>
               <p className="text-blue-200/70 text-sm">Get your free quote today — no obligation.</p>
             </div>

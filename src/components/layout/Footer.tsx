@@ -17,7 +17,7 @@ export function Footer() {
           <div>
             {/* Large HURON wordmark */}
             <p className="text-white font-black text-[clamp(1.75rem,6vw,4rem)] leading-none tracking-tight">HURON</p>
-            <p className="text-[#06B6D4] font-semibold text-xs sm:text-sm tracking-[0.3em] uppercase mt-1">Electrical · Ontario, Canada</p>
+            <p className="text-[#2563EB] font-semibold text-xs sm:text-sm tracking-[0.3em] uppercase mt-1">Electrical · Ontario, Canada</p>
             <p className="text-white/35 text-sm mt-2 sm:mt-3 max-w-sm">Get a free estimate — residential, commercial or industrial.</p>
           </div>
           <div className="flex gap-3 shrink-0 w-full md:w-auto">
@@ -49,12 +49,12 @@ export function Footer() {
               </div>
               <div>
                 <div className="text-white font-black text-lg leading-none">HURON</div>
-                <div className="text-[#06B6D4] font-semibold text-[9px] leading-none tracking-[0.3em] uppercase mt-0.5">Electrical</div>
+                <div className="text-[#2563EB] font-semibold text-[9px] leading-none tracking-[0.3em] uppercase mt-0.5">Electrical</div>
               </div>
             </a>
 
             <p className="text-sm leading-relaxed text-white/35">
-              Strength in Every Connection. Serving Huron County with trusted, licensed electrical services since 2009.
+              Strength in Every Connection. Serving Kitchener–Waterloo & Cambridge with trusted, licensed electrical services since 2021.
             </p>
 
             <div className="flex gap-2">
@@ -128,14 +128,14 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2.5 text-sm text-white/35">
                 <MapPin size={13} className="text-[#2563EB] shrink-0 mt-0.5" />
-                Kitchener–Waterloo &amp; 200km radius
+                Kitchener–Waterloo &amp; Cambridge
               </li>
               <li className="flex items-start gap-2.5 text-sm text-white/35">
                 <Clock size={13} className="text-[#2563EB] shrink-0 mt-0.5" />
                 <span>Mon–Fri: 7am–6pm<br />Emergency: 24/7</span>
               </li>
             </ul>
-            <div className="mt-4 sm:mt-5 inline-flex items-center gap-1.5 bg-[#2563EB]/12 border border-[#2563EB]/20 rounded-lg px-3 py-2 text-[11px] text-[#06B6D4] font-semibold">
+            <div className="mt-4 sm:mt-5 inline-flex items-center gap-1.5 bg-[#2563EB]/12 border border-[#2563EB]/20 rounded-lg px-3 py-2 text-[11px] text-[#2563EB] font-semibold">
               <Zap size={11} fill="currentColor" />
               ESA Lic. #7018628 · #17006718
             </div>
@@ -154,10 +154,10 @@ export function Footer() {
             href="https://bhavinpethani04.github.io/bhavin-pethani/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[11px] text-white/20 hover:text-[#06B6D4] transition-colors duration-200 tracking-wide"
+            className="text-[11px] text-white/20 hover:text-[#2563EB] transition-colors duration-200 tracking-wide"
           >
             Design &amp; Developed by{' '}
-            <span className="font-semibold text-white/35 hover:text-[#06B6D4]">Bhavin Pethani</span>
+            <span className="font-semibold text-white/35 hover:text-[#2563EB]">Bhavin Pethani</span>
           </a>
         </div>
       </div>

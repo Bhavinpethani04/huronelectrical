@@ -44,7 +44,7 @@ export function Header() {
             </div>
             <div>
               <span className="text-white font-black text-lg leading-none tracking-tight">HURON</span>
-              <div className="text-[#06B6D4] font-semibold text-[9px] leading-none tracking-[0.3em] uppercase mt-0.5">
+              <div className="text-[#2563EB] font-semibold text-[9px] leading-none tracking-[0.3em] uppercase mt-0.5">
                 Electrical
               </div>
             </div>
@@ -58,7 +58,7 @@ export function Header() {
                 onClick={() => handleNavClick(item.href)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer ${
                   activeId === item.href
-                    ? 'text-[#06B6D4] bg-[#06B6D4]/10'
+                    ? 'text-[#2563EB] bg-[#2563EB]/10'
                     : 'text-white/60 hover:text-white hover:bg-white/8'
                 }`}
               >
@@ -97,7 +97,7 @@ export function Header() {
               onClick={() => handleNavClick(item.href)}
               className={`block w-full text-left px-4 py-3.5 rounded-xl text-sm font-medium transition-colors cursor-pointer min-h-[48px] flex items-center ${
                 activeId === item.href
-                  ? 'text-[#06B6D4] bg-[#06B6D4]/10 font-bold'
+                  ? 'text-[#2563EB] bg-[#2563EB]/10 font-bold'
                   : 'text-white/60 hover:text-white hover:bg-white/8'
               }`}
             >

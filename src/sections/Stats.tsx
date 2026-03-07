@@ -17,29 +17,29 @@ export function Stats() {
 
           {/* Featured large stat — full-width on sm, 2-col on lg */}
           <div
-            className={`sm:col-span-2 lg:col-span-2 bg-[#2563EB] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 flex flex-col justify-between group cursor-default transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`sm:col-span-2 lg:col-span-2 bg-[#0A1929] border border-white/8 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 flex flex-col justify-between group cursor-default transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             style={{ transition: 'all 0.7s ease 0ms' }}
           >
-            <p className="text-blue-200/80 text-xs font-semibold uppercase tracking-[0.2em] mb-4 sm:mb-6">{s0?.label}</p>
+            <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4 sm:mb-6">{s0?.label}</p>
             <div>
               <div className="bento-stat-num text-white">
-                {s0?.value}<span className="text-[0.55em] text-blue-200">{s0?.suffix}</span>
+                {s0?.value}<span className="text-[0.55em] text-[#2563EB]">{s0?.suffix}</span>
               </div>
-              <p className="text-blue-100/70 text-sm mt-2 sm:mt-3 leading-relaxed">{s0?.description}</p>
+              <p className="text-white/40 text-sm mt-2 sm:mt-3 leading-relaxed">{s0?.description}</p>
             </div>
           </div>
 
-          {/* Cyan accent stat */}
+          {/* Projects Completed stat */}
           <div
-            className={`bg-[#06B6D4] rounded-2xl sm:rounded-3xl p-5 sm:p-7 flex flex-col justify-between cursor-default transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`bg-[#0A1929] border border-white/8 rounded-2xl sm:rounded-3xl p-5 sm:p-7 flex flex-col justify-between cursor-default transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             style={{ transition: 'all 0.7s ease 100ms' }}
           >
-            <p className="text-cyan-900/60 text-xs font-semibold uppercase tracking-[0.2em] mb-3 sm:mb-4">{s1?.label}</p>
+            <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-3 sm:mb-4">{s1?.label}</p>
             <div>
               <div className="text-[clamp(2rem,5vw,3.5rem)] font-black text-white leading-none">
-                {s1?.value}<span className="text-[0.6em] text-cyan-100">{s1?.suffix}</span>
+                {s1?.value}<span className="text-[0.6em] text-[#2563EB]">{s1?.suffix}</span>
               </div>
-              <p className="text-cyan-900/60 text-xs mt-2 leading-snug">{s1?.description}</p>
+              <p className="text-white/35 text-xs mt-2 leading-snug">{s1?.description}</p>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ export function Stats() {
           {/* Full-width bottom stat */}
           {s3 && (
             <div
-              className={`sm:col-span-2 lg:col-span-4 bg-white/5 border border-white/8 rounded-2xl sm:rounded-3xl p-5 sm:p-7 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 cursor-default transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`sm:col-span-2 lg:col-span-4 bg-[#0A1929] border border-white/8 rounded-2xl sm:rounded-3xl p-5 sm:p-7 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 cursor-default transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{ transition: 'all 0.7s ease 300ms' }}
             >
               <div className="text-[clamp(2.25rem,6vw,4rem)] font-black text-white leading-none shrink-0">

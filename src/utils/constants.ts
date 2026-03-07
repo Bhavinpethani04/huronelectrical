@@ -2,13 +2,13 @@ import type { Service, Testimonial, FAQItem, NavItem, Stat, WhyChooseItem } from
 
 export const COMPANY = {
   name: 'Huron Electrical',
-  tagline: 'Powering Huron County with Expert Electrical Solutions',
-  phone: '(519) 555-0182',
+  tagline: 'Powering Kitchener–Waterloo & Cambridge with Expert Electrical Solutions',
+  phone: '+1 647-770-9825',
   email: 'info@huronelectrical.ca',
   address: '142 Goderich St, Goderich, ON N7A 1M9',
   license: 'ESA Lic. #7024913',
   hours: 'Mon–Fri: 7am–6pm | Emergency: 24/7',
-  founded: '2008',
+  founded: '2021',
   facebook: 'https://facebook.com/huronelectrical',
   instagram: 'https://instagram.com/huronelectrical',
   linkedin: 'https://linkedin.com/company/huronelectrical',
@@ -24,8 +24,8 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const STATS: Stat[] = [
-  { value: '15', suffix: '+', label: 'Years Experience', description: 'Serving Huron County since 2008' },
-  { value: '2500', suffix: '+', label: 'Projects Completed', description: 'Residential & commercial jobs' },
+  { value: '4', suffix: '+', label: 'Years Experience', description: 'Serving Kitchener–Waterloo & Cambridge since 2021' },
+  { value: '50', suffix: '+', label: 'Projects Completed', description: 'Residential & commercial jobs' },
   { value: '100', suffix: '%', label: 'Licensed & Insured', description: 'ESA certified professionals' },
   { value: '24', suffix: '/7', label: 'Emergency Service', description: 'Available when you need us most' },
 ];
@@ -42,7 +42,7 @@ export const SERVICES: Service[] = [
     id: 'commercial',
     icon: 'Building2',
     title: 'Commercial Electrical',
-    description: 'Reliable electrical solutions for offices, retail spaces, restaurants, and multi-unit buildings across Huron County.',
+    description: 'Reliable electrical solutions for offices, retail spaces, restaurants, and multi-unit buildings across Kitchener–Waterloo & Cambridge.',
     features: ['Commercial panel upgrades', 'Lighting systems & controls', 'Data & communication cabling', 'Code compliance work'],
     highlight: true,
   },
@@ -71,14 +71,14 @@ export const SERVICES: Service[] = [
     id: 'emergency',
     icon: 'ShieldAlert',
     title: '24/7 Emergency Service',
-    description: 'Electrical emergencies don\'t wait for business hours — and neither do we. Fast, reliable emergency response across Huron County.',
+    description: 'Electrical emergencies don\'t wait for business hours — and neither do we. Fast, reliable emergency response across Kitchener–Waterloo & Cambridge.',
     features: ['24/7 availability', 'Rapid response dispatch', 'Power outage restoration', 'Hazard identification & repair'],
   },
 ];
 
 export const WHY_CHOOSE: WhyChooseItem[] = [
   { icon: 'BadgeCheck', title: 'Licensed & Certified', description: 'ESA-licensed electricians with up-to-date training. We follow all Ontario Electrical Safety Code requirements.' },
-  { icon: 'MapPin', title: 'Locally Rooted', description: 'Born and raised in Huron County. We know this community and take pride in keeping it safe and powered.' },
+  { icon: 'MapPin', title: 'Locally Rooted', description: 'Born and raised in Kitchener–Waterloo & Cambridge. We know this community and take pride in keeping it safe and powered.' },
   { icon: 'DollarSign', title: 'Transparent Pricing', description: 'Upfront quotes with no hidden fees. You know the cost before any work begins — guaranteed.' },
   { icon: 'Clock', title: '24/7 Emergency Response', description: 'Electrical emergencies can\'t wait. Our on-call team is always ready to respond fast when you need us most.' },
 ];
@@ -137,7 +137,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     id: '5',
     question: 'How quickly can you respond to electrical emergencies?',
-    answer: 'We have on-call electricians available 24/7. For emergencies in Huron County, we typically respond within 30–60 minutes. Your safety is our top priority — don\'t wait to call.',
+    answer: 'We have on-call electricians available 24/7. For emergencies in Kitchener–Waterloo & Cambridge, we typically respond within 30–60 minutes. Your safety is our top priority — don\'t wait to call.',
   },
 ];
 

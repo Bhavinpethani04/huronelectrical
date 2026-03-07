@@ -17,7 +17,7 @@ export function About() {
               <div className="absolute inset-0 bg-blueprint-grid opacity-60" />
               {/* Blue glow */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#2563EB]/20 rounded-full blur-[80px]" />
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#06B6D4]/15 rounded-full blur-[60px]" />
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#2563EB]/15 rounded-full blur-[60px]" />
 
               {/* Centre wordmark */}
               <div className="absolute inset-0 flex items-center justify-center">
@@ -27,7 +27,7 @@ export function About() {
                     <Users size={36} className="text-white hidden sm:block" />
                   </div>
                   <p className="text-white font-black text-base sm:text-xl tracking-tight">The Huron Electrical Team</p>
-                  <p className="text-white/40 text-sm">Proudly serving Ontario since 2009</p>
+                  <p className="text-white/40 text-sm">Proudly serving Ontario since 2021</p>
                 </div>
               </div>
 
@@ -40,16 +40,16 @@ export function About() {
               </div>
 
               {/* Floating year badge */}
-              <div className="absolute bottom-5 right-5 bg-[#06B6D4] rounded-2xl px-5 py-4 shadow-xl">
-                <div className="text-white font-black text-3xl leading-none">15+</div>
+              <div className="absolute bottom-5 right-5 bg-[#2563EB] rounded-2xl px-5 py-4 shadow-xl">
+                <div className="text-white font-black text-3xl leading-none">4+</div>
                 <div className="text-white/70 text-[11px] font-semibold mt-1 uppercase tracking-wide">Years</div>
               </div>
 
               {/* Stat strip at bottom */}
               <div className="relative w-full grid grid-cols-2 border-t border-white/10">
                 {[
-                  { value: '2,500+', label: 'Jobs Completed' },
-                  { value: '200km+', label: 'Service Radius' },
+                  { value: '50+', label: 'Jobs Completed' },
+                  { value: 'EV+', label: 'Charger Installs' },
                 ].map((stat, i) => (
                   <div key={stat.label} className={`px-4 sm:px-6 py-4 sm:py-5 ${i === 0 ? 'border-r border-white/10' : ''}`}>
                     <p className="text-white font-black text-xl sm:text-2xl">{stat.value}</p>
@@ -68,14 +68,14 @@ export function About() {
                 <span className="text-[#2563EB] text-xs font-bold uppercase tracking-[0.25em]">About Us</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0F1C35] leading-tight tracking-tight">
-                Powering Huron County<br />
-                <span className="text-[#2563EB]">Since 2009</span>
+                Powering Kitchener–Waterloo<br />
+                <span className="text-[#2563EB]">Since 2021</span>
               </h2>
               <p className="text-slate-500 text-lg leading-relaxed">
                 Huron Electrical was built on a simple belief: skilled, honest electrical work should be accessible to every homeowner and business — without the guesswork.
               </p>
               <p className="text-slate-500 text-sm leading-relaxed">
-                From our roots in the Kitchener–Waterloo area, we've grown into a full-service electrical contractor serving a 200km+ radius. Every technician is ESA-licensed, thoroughly trained, and committed to safety first.
+                From our roots in the Kitchener–Waterloo & Cambridge area, we've grown into a full-service electrical contractor serving the region and beyond. Every technician is ESA-licensed, thoroughly trained, and committed to safety first.
               </p>
             </div>
 
@@ -83,7 +83,7 @@ export function About() {
             <div className="space-y-0 border border-[#DBEAFE] rounded-2xl overflow-hidden">
               {[
                 { icon: ShieldCheck, label: 'ESA Licensed & Certified', sub: 'Lic. #7018628 / #17006718' },
-                { icon: Award, label: '2,500+ Jobs Done', sub: 'Residential, commercial & industrial' },
+                { icon: Award, label: '50+ Jobs Done', sub: 'Residential, commercial & industrial' },
                 { icon: Users, label: 'Experienced Team', sub: 'Skilled & certified electricians' },
                 { icon: Phone, label: '24/7 Emergency', sub: 'Always a call away' },
               ].map(({ icon: Icon, label, sub }, i) => (

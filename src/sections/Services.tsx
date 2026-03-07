@@ -9,19 +9,12 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Home, Building2, Factory, Zap, Lightbulb, ShieldAlert,
 };
 
-const CARD_ACCENTS: Record<string, { bg: string; icon: string; badge: string }> = {
-  residential:  { bg: 'bg-[#2563EB]', icon: 'text-white', badge: 'bg-blue-400/20 text-blue-200' },
-  commercial:   { bg: 'bg-[#0A1929]', icon: 'text-[#2563EB]', badge: 'bg-[#2563EB]/15 text-[#2563EB]' },
-  industrial:   { bg: 'bg-[#06B6D4]', icon: 'text-white', badge: 'bg-cyan-800/20 text-cyan-100' },
-  'ev-charging':{ bg: 'bg-[#050D1F]', icon: 'text-[#06B6D4]', badge: 'bg-[#06B6D4]/15 text-[#06B6D4]' },
-  lighting:     { bg: 'bg-[#1D4ED8]', icon: 'text-white', badge: 'bg-blue-300/20 text-blue-200' },
-  emergency:    { bg: 'bg-[#0F1C35]', icon: 'text-[#2563EB]', badge: 'bg-[#2563EB]/15 text-[#2563EB]' },
-};
+const CARD_ACCENT = { bg: 'bg-[#0A1929]', icon: 'text-[#2563EB]', badge: 'bg-[#2563EB]/15 text-[#2563EB]' };
 
 function ServiceCard({ service, index }: { service: Service; index: number }) {
   const [ref, visible] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.08 });
   const Icon = ICON_MAP[service.icon] ?? Zap;
-  const accent = CARD_ACCENTS[service.id] ?? CARD_ACCENTS.commercial;
+  const accent = CARD_ACCENT;
 
   return (
     <div
@@ -32,7 +25,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
       style={{ transition: `all 0.55s ease ${index * 80}ms` }}
     >
       {service.highlight && (
-        <div className="absolute -top-3 left-6 bg-[#06B6D4] text-white text-[10px] font-black px-3.5 py-1 rounded-full uppercase tracking-wider shadow-lg">
+        <div className="absolute -top-3 left-6 bg-[#2563EB] text-white text-[10px] font-black px-3.5 py-1 rounded-full uppercase tracking-wider shadow-lg">
           Most Popular
         </div>
       )}
