@@ -70,15 +70,15 @@ export function WhyChoose() {
 
           {/* Right — dark feature card */}
           <div className={`transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-            <div className="bg-[#050D1F] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 relative overflow-hidden">
-              <div className="absolute inset-0 bg-blueprint-grid opacity-50" />
+            <div className="bg-white border border-[#BFDBFE] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 relative overflow-hidden">
+              <div className="absolute inset-0 bg-blueprint-grid opacity-30" />
               <div className="relative space-y-5 sm:space-y-6">
-                <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em]">Our Commitment</p>
-                <blockquote className="text-white text-xl sm:text-2xl font-black leading-snug tracking-tight">
+                <p className="text-slate-400 text-xs font-semibold uppercase tracking-[0.2em]">Our Commitment</p>
+                <blockquote className="text-[#0F1C35] text-xl sm:text-2xl font-black leading-snug tracking-tight">
                   "Licensed. Reliable.<br />
                   <span className="text-[#2563EB]">On time.</span> Every time."
                 </blockquote>
-                <div className="h-px bg-white/10" />
+                <div className="h-px bg-[#DBEAFE]" />
                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   {[
                     { val: '4+', label: 'Years Experience' },
@@ -86,13 +86,13 @@ export function WhyChoose() {
                     { val: '24/7', label: 'Emergency Line' },
                     { val: 'ESA', label: 'Licensed #7018628' },
                   ].map(stat => (
-                    <div key={stat.label} className="bg-white/5 border border-white/8 rounded-xl sm:rounded-2xl px-3 sm:px-4 py-3 sm:py-4">
+                    <div key={stat.label} className="bg-[#EFF6FF] border border-[#DBEAFE] rounded-xl sm:rounded-2xl px-3 sm:px-4 py-3 sm:py-4">
                       <p className="text-[#2563EB] font-black text-lg sm:text-xl">{stat.val}</p>
-                      <p className="text-white/40 text-xs mt-0.5 sm:mt-1">{stat.label}</p>
+                      <p className="text-slate-400 text-xs mt-0.5 sm:mt-1">{stat.label}</p>
                     </div>
                   ))}
                 </div>
-                <p className="text-white/25 text-xs border-l-2 border-[#2563EB] pl-4">
+                <p className="text-slate-400 text-xs border-l-2 border-[#2563EB] pl-4">
                   ESA Lic. #7018628 &amp; #17006718 · Fully Insured · Ontario, Canada
                 </p>
               </div>

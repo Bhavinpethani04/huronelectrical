@@ -26,8 +26,8 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#050D1F]/98 backdrop-blur-xl shadow-lg shadow-black/20 border-b border-white/5'
-          : 'bg-[#050D1F]/80 backdrop-blur-md'
+          ? 'bg-white/98 backdrop-blur-xl shadow-lg shadow-blue-100/60 border-b border-[#DBEAFE]'
+          : 'bg-white/85 backdrop-blur-md border-b border-[#DBEAFE]/50'
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
@@ -43,7 +43,7 @@ export function Header() {
               <Zap size={18} fill="white" className="text-white" />
             </div>
             <div>
-              <span className="text-white font-black text-lg leading-none tracking-tight">HURON</span>
+              <span className="text-[#0F1C35] font-black text-lg leading-none tracking-tight">HURON</span>
               <div className="text-[#2563EB] font-semibold text-[9px] leading-none tracking-[0.3em] uppercase mt-0.5">
                 Electrical
               </div>
@@ -59,7 +59,7 @@ export function Header() {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer ${
                   activeId === item.href
                     ? 'text-[#2563EB] bg-[#2563EB]/10'
-                    : 'text-white/60 hover:text-white hover:bg-white/8'
+                    : 'text-slate-500 hover:text-[#0F1C35] hover:bg-[#EFF6FF]'
                 }`}
               >
                 {item.label}
@@ -79,7 +79,7 @@ export function Header() {
             </a>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden p-3 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="md:hidden p-3 rounded-xl text-slate-500 hover:text-[#0F1C35] hover:bg-[#EFF6FF] transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Toggle menu"
             >
               {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -90,7 +90,7 @@ export function Header() {
 
       {/* Mobile menu */}
       <div className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? 'max-h-screen' : 'max-h-0'}`}>
-        <div className="bg-[#050D1F] border-t border-white/8 px-4 py-4 space-y-1">
+        <div className="bg-white border-t border-[#DBEAFE] px-4 py-4 space-y-1">
           {NAV_ITEMS.map(item => (
             <button
               key={item.href}
@@ -98,7 +98,7 @@ export function Header() {
               className={`block w-full text-left px-4 py-3.5 rounded-xl text-sm font-medium transition-colors cursor-pointer min-h-[48px] flex items-center ${
                 activeId === item.href
                   ? 'text-[#2563EB] bg-[#2563EB]/10 font-bold'
-                  : 'text-white/60 hover:text-white hover:bg-white/8'
+                  : 'text-slate-500 hover:text-[#0F1C35] hover:bg-[#EFF6FF]'
               }`}
             >
               {item.label}
@@ -111,7 +111,7 @@ export function Header() {
             <Phone size={16} />
             Call Now: {COMPANY.phone}
           </a>
-          <p className="text-center text-white/30 text-[11px] pt-2 pb-1">ESA Lic. #7018628 · Licensed & Insured</p>
+          <p className="text-center text-slate-400 text-[11px] pt-2 pb-1">ESA Lic. #7018628 · Licensed & Insured</p>
         </div>
       </div>
     </header>

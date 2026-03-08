@@ -74,11 +74,11 @@ export function Testimonials() {
         </div>
 
         {/* Featured testimonial */}
-        <div className={`relative bg-[#050D1F] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 mb-4 sm:mb-6 overflow-hidden transition-all duration-700 delay-100 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <div className="absolute inset-0 bg-blueprint-grid opacity-40" />
+        <div className={`relative bg-white border border-[#BFDBFE] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 mb-4 sm:mb-6 overflow-hidden transition-all duration-700 delay-100 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <div className="absolute inset-0 bg-blueprint-grid opacity-10" />
           <div className="relative">
-            <div className="text-[#2563EB] text-6xl sm:text-8xl font-black leading-none mb-3 sm:mb-4 opacity-20 select-none">&ldquo;</div>
-            <p className="text-white text-base sm:text-xl md:text-2xl font-medium leading-relaxed max-w-3xl -mt-4 sm:-mt-6">
+            <div className="text-[#2563EB] text-6xl sm:text-8xl font-black leading-none mb-3 sm:mb-4 opacity-10 select-none">&ldquo;</div>
+            <p className="text-[#0F1C35] text-base sm:text-xl md:text-2xl font-medium leading-relaxed max-w-3xl -mt-4 sm:-mt-6">
               {featured.text}
             </p>
             <div className="flex items-center gap-3 sm:gap-4 mt-6 sm:mt-8">
@@ -86,8 +86,8 @@ export function Testimonials() {
                 {featured.initials}
               </div>
               <div>
-                <p className="text-white font-bold text-sm sm:text-base">{featured.name}</p>
-                <p className="text-white/40 text-xs sm:text-sm">{featured.location} · {featured.service}</p>
+                <p className="text-[#0F1C35] font-bold text-sm sm:text-base">{featured.name}</p>
+                <p className="text-slate-400 text-xs sm:text-sm">{featured.location} · {featured.service}</p>
               </div>
               <div className="ml-auto hidden sm:flex items-center gap-1">
                 {[...Array(featured.rating)].map((_, i) => <Star key={i} size={14} fill="#2563EB" className="text-[#2563EB]" />)}

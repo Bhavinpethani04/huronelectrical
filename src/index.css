@@ -6,12 +6,12 @@
   --color-blue-light: #3B82F6;
   --color-blue-dark:  #1D4ED8;
 
-  --color-navy:       #050D1F;
-  --color-navy-2:     #0A1929;
+  --color-navy:       #EFF6FF;
+  --color-navy-2:     #DBEAFE;
   --color-ink:        #0F1C35;
   --color-muted:      #64748B;
   --color-surface:    #F0F6FF;
-  --color-border:     #DBEAFE;
+  --color-border:     #BFDBFE;
 }
 
 @layer base {
@@ -28,7 +28,7 @@ body {
 }
 
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #050D1F; }
+::-webkit-scrollbar-track { background: #EFF6FF; }
 ::-webkit-scrollbar-thumb { background: #2563EB; border-radius: 4px; }
 
 /* Animations */
@@ -73,12 +73,13 @@ body {
     linear-gradient(90deg, rgba(37,99,235,0.07) 1px, transparent 1px);
   background-size: 44px 44px;
 }
-/* Diagonal blueprint grid */
+/* Circuit-board grid — lines + dots at every intersection */
 .bg-blueprint-grid {
   background-image:
-    linear-gradient(rgba(37,99,235,0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37,99,235,0.08) 1px, transparent 1px);
-  background-size: 56px 56px;
+    radial-gradient(circle, rgba(37,99,235,0.20) 1.5px, transparent 1.5px),
+    linear-gradient(rgba(37,99,235,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37,99,235,0.07) 1px, transparent 1px);
+  background-size: 48px 48px, 48px 48px, 48px 48px;
 }
 .bg-circuit-pattern {
   background-image:

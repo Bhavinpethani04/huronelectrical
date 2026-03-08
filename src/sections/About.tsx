@@ -12,7 +12,7 @@ export function About() {
 
           {/* Left — large dark image panel */}
           <div className={`transition-all duration-700 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <div className="relative bg-[#050D1F] rounded-2xl sm:rounded-3xl overflow-hidden min-h-[340px] sm:min-h-[440px] lg:min-h-[520px] flex items-end">
+            <div className="relative bg-[#EFF6FF] border border-[#BFDBFE] rounded-2xl sm:rounded-3xl overflow-hidden min-h-[340px] sm:min-h-[440px] lg:min-h-[520px] flex items-end">
               {/* Blueprint grid overlay */}
               <div className="absolute inset-0 bg-blueprint-grid opacity-60" />
               {/* Blue glow */}
@@ -26,8 +26,8 @@ export function About() {
                     <Users size={28} className="text-white sm:hidden" />
                     <Users size={36} className="text-white hidden sm:block" />
                   </div>
-                  <p className="text-white font-black text-base sm:text-xl tracking-tight">The Huron Electrical Team</p>
-                  <p className="text-white/40 text-sm">Proudly serving Ontario since 2021</p>
+                  <p className="text-[#0F1C35] font-black text-base sm:text-xl tracking-tight">The Huron Electrical Team</p>
+                  <p className="text-slate-400 text-sm">Proudly serving Ontario since 2021</p>
                 </div>
               </div>
 
@@ -46,14 +46,14 @@ export function About() {
               </div>
 
               {/* Stat strip at bottom */}
-              <div className="relative w-full grid grid-cols-2 border-t border-white/10">
+              <div className="relative w-full grid grid-cols-2 border-t border-[#BFDBFE]">
                 {[
                   { value: '50+', label: 'Jobs Completed' },
                   { value: 'EV+', label: 'Charger Installs' },
                 ].map((stat, i) => (
-                  <div key={stat.label} className={`px-4 sm:px-6 py-4 sm:py-5 ${i === 0 ? 'border-r border-white/10' : ''}`}>
-                    <p className="text-white font-black text-xl sm:text-2xl">{stat.value}</p>
-                    <p className="text-white/40 text-xs mt-0.5">{stat.label}</p>
+                  <div key={stat.label} className={`px-4 sm:px-6 py-4 sm:py-5 ${i === 0 ? 'border-r border-[#BFDBFE]' : ''}`}>
+                    <p className="text-[#0F1C35] font-black text-xl sm:text-2xl">{stat.value}</p>
+                    <p className="text-slate-400 text-xs mt-0.5">{stat.label}</p>
                   </div>
                 ))}
               </div>

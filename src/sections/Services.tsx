@@ -9,7 +9,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Home, Building2, Factory, Zap, Lightbulb, ShieldAlert,
 };
 
-const CARD_ACCENT = { bg: 'bg-[#0A1929]', icon: 'text-[#2563EB]', badge: 'bg-[#2563EB]/15 text-[#2563EB]' };
+const CARD_ACCENT = { bg: 'bg-white', icon: 'text-[#2563EB]', badge: 'bg-[#EFF6FF] text-[#2563EB]' };
 
 function ServiceCard({ service, index }: { service: Service; index: number }) {
   const [ref, visible] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.08 });
@@ -19,7 +19,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
   return (
     <div
       ref={ref}
-      className={`service-card-new relative ${accent.bg} rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-white/8 cursor-default group flex flex-col justify-between min-h-[240px] sm:min-h-[280px] ${
+      className={`service-card-new relative ${accent.bg} rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-[#BFDBFE] cursor-default group flex flex-col justify-between min-h-[240px] sm:min-h-[280px] ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
       style={{ transition: `all 0.55s ease ${index * 80}ms` }}
@@ -32,20 +32,20 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
 
       {/* Top row */}
       <div className="flex items-start justify-between mb-4 sm:mb-6">
-        <div className={`w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center`}>
+        <div className={`w-12 h-12 rounded-2xl bg-[#EFF6FF] flex items-center justify-center`}>
           <Icon size={22} className={accent.icon} />
         </div>
-        <ArrowUpRight size={16} className="text-white/25 group-hover:text-white/60 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
+        <ArrowUpRight size={16} className="text-slate-300 group-hover:text-[#2563EB] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
       </div>
 
       {/* Title + desc */}
       <div className="flex-1">
-        <h3 className="text-white font-black text-lg leading-tight mb-2">{service.title}</h3>
-        <p className="text-white/50 text-sm leading-relaxed">{service.description}</p>
+        <h3 className="text-[#0F1C35] font-black text-lg leading-tight mb-2">{service.title}</h3>
+        <p className="text-slate-500 text-sm leading-relaxed">{service.description}</p>
       </div>
 
       {/* Bottom */}
-      <div className="flex items-center justify-between mt-4 sm:mt-6 pt-4 sm:pt-5 border-t border-white/10">
+      <div className="flex items-center justify-between mt-4 sm:mt-6 pt-4 sm:pt-5 border-t border-[#DBEAFE]">
         <div className="flex flex-wrap gap-1.5">
           {service.features.slice(0, 2).map(f => (
             <span key={f} className={`text-[10px] font-semibold px-2 sm:px-2.5 py-1 rounded-full ${accent.badge}`}>
@@ -55,7 +55,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
         </div>
         <button
           onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          className="text-white/50 hover:text-white text-xs font-bold transition-colors cursor-pointer whitespace-nowrap ml-2 min-h-[44px] flex items-center"
+          className="text-slate-400 hover:text-[#2563EB] text-xs font-bold transition-colors cursor-pointer whitespace-nowrap ml-2 min-h-[44px] flex items-center"
         >
           Quote →
         </button>

@@ -8,18 +8,18 @@ export function Contact() {
   const { formData, errors, submitted, isSubmitting, handleChange, handleSubmit } = useFormValidation();
 
   const inputCls = (field: keyof typeof errors) =>
-    `w-full px-4 py-3.5 rounded-xl border text-sm outline-none transition-all duration-200 bg-white/8 text-white placeholder-white/25 ${
+    `w-full px-4 py-3.5 rounded-xl border text-sm outline-none transition-all duration-200 bg-white text-[#0F1C35] placeholder-slate-400 ${
       errors[field]
-        ? 'border-red-400/60 focus:border-red-400'
-        : 'border-white/15 focus:border-[#2563EB] focus:bg-white/12 focus:shadow-[0_0_0_3px_rgba(37,99,235,0.2)]'
+        ? 'border-red-400 focus:border-red-400'
+        : 'border-[#BFDBFE] focus:border-[#2563EB] focus:shadow-[0_0_0_3px_rgba(37,99,235,0.15)]'
     }`;
 
   return (
-    <section id="contact" className="py-14 sm:py-20 lg:py-24 bg-[#050D1F] relative overflow-hidden">
+    <section id="contact" className="py-14 sm:py-20 lg:py-24 bg-[#F0F6FF] relative overflow-hidden">
       {/* Blueprint grid overlay */}
-      <div className="absolute inset-0 bg-blueprint-grid opacity-50" />
+      <div className="absolute inset-0 bg-blueprint-grid opacity-10" />
       {/* Glow */}
-      <div className="absolute top-0 left-1/3 w-[600px] h-[400px] bg-[#2563EB]/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-1/3 w-[600px] h-[400px] bg-[#2563EB]/6 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
 
@@ -32,10 +32,10 @@ export function Contact() {
             <div className="w-1 h-5 bg-[#2563EB] rounded-full" />
             <span className="text-[#2563EB] text-xs font-bold uppercase tracking-[0.25em]">Get In Touch</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0F1C35] leading-tight tracking-tight">
             Request a <span className="text-[#2563EB]">Free Quote</span>
           </h2>
-          <p className="text-white/40 text-sm sm:text-base lg:text-lg mt-2.5 sm:mt-3">Tell us about your project — we'll get back to you within 24 hours.</p>
+          <p className="text-slate-500 text-sm sm:text-base lg:text-lg mt-2.5 sm:mt-3">Tell us about your project — we'll get back to you within 24 hours.</p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-6 sm:gap-8 items-start">
@@ -43,60 +43,60 @@ export function Contact() {
           {/* Form — 3 cols */}
           <div className={`lg:col-span-3 transition-all duration-700 delay-100 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             {submitted ? (
-              <div className="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-8 sm:p-14 text-center">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#2563EB]/20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5 border border-[#2563EB]/30">
+              <div className="bg-white border border-[#BFDBFE] rounded-2xl sm:rounded-3xl p-8 sm:p-14 text-center">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#EFF6FF] rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5 border border-[#BFDBFE]">
                   <CheckCircle size={28} className="text-[#2563EB] sm:hidden" />
                   <CheckCircle size={32} className="text-[#2563EB] hidden sm:block" />
                 </div>
-                <h3 className="text-white font-black text-xl sm:text-2xl mb-2">Message Sent!</h3>
-                <p className="text-white/40 text-sm">Thanks for reaching out. We'll get back to you within 24 hours.</p>
+                <h3 className="text-[#0F1C35] font-black text-xl sm:text-2xl mb-2">Message Sent!</h3>
+                <p className="text-slate-500 text-sm">Thanks for reaching out. We'll get back to you within 24 hours.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate className="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-7 md:p-9 space-y-4 sm:space-y-5 backdrop-blur-sm">
+              <form onSubmit={handleSubmit} noValidate className="bg-white border border-[#BFDBFE] rounded-2xl sm:rounded-3xl p-5 sm:p-7 md:p-9 space-y-4 sm:space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs font-bold text-white/40 mb-2 uppercase tracking-wide">Full Name *</label>
+                    <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wide">Full Name *</label>
                     <input name="name" value={formData.name} onChange={handleChange} placeholder="John Smith" className={inputCls('name')} />
-                    {errors.name && <p className="text-red-400 text-xs mt-1.5">{errors.name}</p>}
+                    {errors.name && <p className="text-red-500 text-xs mt-1.5">{errors.name}</p>}
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-white/40 mb-2 uppercase tracking-wide">Email Address *</label>
+                    <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wide">Email Address *</label>
                     <input name="email" type="email" value={formData.email} onChange={handleChange} placeholder="john@example.com" className={inputCls('email')} />
-                    {errors.email && <p className="text-red-400 text-xs mt-1.5">{errors.email}</p>}
+                    {errors.email && <p className="text-red-500 text-xs mt-1.5">{errors.email}</p>}
                   </div>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs font-bold text-white/40 mb-2 uppercase tracking-wide">Phone Number</label>
+                    <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wide">Phone Number</label>
                     <input name="phone" value={formData.phone} onChange={handleChange} placeholder="(519) 555-0100" className={inputCls('phone')} />
-                    {errors.phone && <p className="text-red-400 text-xs mt-1.5">{errors.phone}</p>}
+                    {errors.phone && <p className="text-red-500 text-xs mt-1.5">{errors.phone}</p>}
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-white/40 mb-2 uppercase tracking-wide">Service Needed</label>
+                    <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wide">Service Needed</label>
                     <select name="service" value={formData.service} onChange={handleChange}
-                      className="w-full px-4 py-3.5 rounded-xl border border-white/15 bg-white/8 text-white/60 text-sm outline-none focus:border-[#2563EB] focus:shadow-[0_0_0_3px_rgba(37,99,235,0.2)] transition-all duration-200">
-                      <option value="" className="bg-[#050D1F]">Select a service...</option>
-                      {SERVICES.map(s => <option key={s.id} value={s.id} className="bg-[#050D1F]">{s.title}</option>)}
-                      <option value="other" className="bg-[#050D1F]">Other / Not Sure</option>
+                      className="w-full px-4 py-3.5 rounded-xl border border-[#BFDBFE] bg-white text-slate-600 text-sm outline-none focus:border-[#2563EB] focus:shadow-[0_0_0_3px_rgba(37,99,235,0.15)] transition-all duration-200">
+                      <option value="">Select a service...</option>
+                      {SERVICES.map(s => <option key={s.id} value={s.id}>{s.title}</option>)}
+                      <option value="other">Other / Not Sure</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-white/40 mb-2 uppercase tracking-wide">Project Details *</label>
+                  <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wide">Project Details *</label>
                   <textarea name="message" value={formData.message} onChange={handleChange} rows={5}
                     placeholder="Describe your project or electrical issue..."
                     className={`${inputCls('message')} resize-none`} />
-                  {errors.message && <p className="text-red-400 text-xs mt-1.5">{errors.message}</p>}
+                  {errors.message && <p className="text-red-500 text-xs mt-1.5">{errors.message}</p>}
                 </div>
 
                 <button type="submit" disabled={isSubmitting}
-                  className="w-full flex items-center justify-center gap-2.5 bg-[#2563EB] text-white font-black py-4 rounded-2xl hover:bg-[#1D4ED8] transition-all disabled:opacity-60 cursor-pointer text-base shadow-lg shadow-blue-500/25 hover:-translate-y-0.5 min-h-[52px]">
+                  className="w-full flex items-center justify-center gap-2.5 bg-[#2563EB] text-white font-black py-4 rounded-2xl hover:bg-[#1D4ED8] transition-all disabled:opacity-60 cursor-pointer text-base shadow-lg shadow-blue-500/20 hover:-translate-y-0.5 min-h-[52px]">
                   {isSubmitting ? 'Sending...' : <><Send size={17} /> Send Message</>}
                 </button>
 
-                <p className="text-center text-white/25 text-xs">We typically respond within a few hours during business hours.</p>
+                <p className="text-center text-slate-400 text-xs">We typically respond within a few hours during business hours.</p>
               </form>
             )}
           </div>
@@ -111,15 +111,15 @@ export function Contact() {
                 { icon: MapPin, label: 'Service Area', value: 'Kitchener–Waterloo & Cambridge', href: undefined },
                 { icon: Clock, label: 'Hours', value: 'Mon–Fri: 7am–6pm · Emergency: 24/7', href: undefined },
               ].map(({ icon: Icon, label, value, href }) => (
-                <div key={label} className="flex items-center gap-3 sm:gap-4 bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl px-4 sm:px-5 py-3.5 sm:py-4 min-h-[60px]">
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#2563EB]/20 border border-[#2563EB]/25 flex items-center justify-center shrink-0">
+                <div key={label} className="flex items-center gap-3 sm:gap-4 bg-white border border-[#BFDBFE] rounded-xl sm:rounded-2xl px-4 sm:px-5 py-3.5 sm:py-4 min-h-[60px]">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#EFF6FF] border border-[#DBEAFE] flex items-center justify-center shrink-0">
                     <Icon size={15} className="text-[#2563EB]" />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-white/35 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider">{label}</p>
+                    <p className="text-slate-400 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider">{label}</p>
                     {href
-                      ? <a href={href} className="text-white font-semibold text-xs sm:text-sm hover:text-[#2563EB] transition-colors truncate block">{value}</a>
-                      : <p className="text-white font-semibold text-xs sm:text-sm">{value}</p>
+                      ? <a href={href} className="text-[#0F1C35] font-semibold text-xs sm:text-sm hover:text-[#2563EB] transition-colors truncate block">{value}</a>
+                      : <p className="text-[#0F1C35] font-semibold text-xs sm:text-sm">{value}</p>
                     }
                   </div>
                 </div>

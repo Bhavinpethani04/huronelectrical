@@ -7,14 +7,14 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col bg-[#050D1F] overflow-hidden">
+    <section id="home" className="relative min-h-screen flex flex-col bg-gradient-to-br from-[#EFF6FF] via-[#F8FAFF] to-white overflow-hidden">
 
       {/* Blueprint grid background */}
       <div className="absolute inset-0 bg-blueprint-grid pointer-events-none" />
 
       {/* Blue glow orbs */}
-      <div className="absolute top-0 left-1/4 w-[700px] h-[500px] bg-[#2563EB]/12 rounded-full blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[400px] bg-[#2563EB]/8 rounded-full blur-[110px] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-[700px] h-[500px] bg-[#2563EB]/6 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[400px] bg-[#2563EB]/5 rounded-full blur-[110px] pointer-events-none" />
 
       {/* Large decorative circuit lines */}
       <svg className="absolute inset-0 w-full h-full opacity-[0.04] pointer-events-none" preserveAspectRatio="none" viewBox="0 0 1440 900">
@@ -41,11 +41,11 @@ export function Hero() {
                 <span className="text-[#2563EB] text-[11px] sm:text-xs font-semibold tracking-wide">ESA Licensed · Fully Insured</span>
               </div>
               <div className="h-px w-8 sm:w-12 bg-[#2563EB]/40 hidden xs:block" />
-              <span className="text-white/40 text-[11px] sm:text-xs font-medium uppercase tracking-[0.15em]">Since 2021</span>
+              <span className="text-slate-400 text-[11px] sm:text-xs font-medium uppercase tracking-[0.15em]">Since 2021</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-[clamp(2.25rem,7vw,6.5rem)] font-black text-white leading-[0.92] tracking-[-0.03em]">
+            <h1 className="text-[clamp(2.25rem,7vw,6.5rem)] font-black text-[#0F1C35] leading-[0.92] tracking-[-0.03em]">
               Ontario's<br />
               <span className="text-[#2563EB]">Trusted</span><br />
               Electricians
@@ -60,9 +60,9 @@ export function Hero() {
             </div>
 
             {/* Subtitle */}
-            <p className="text-white/55 text-base sm:text-lg md:text-xl leading-relaxed max-w-xl font-light">
+            <p className="text-slate-500 text-base sm:text-lg md:text-xl leading-relaxed max-w-xl font-light">
               Residential, commercial &amp; industrial electrical solutions — delivered on time by ESA-licensed experts across{' '}
-              <span className="text-white/80 font-medium">Kitchener–Waterloo &amp; Cambridge</span>.
+              <span className="text-[#0F1C35] font-medium">Kitchener–Waterloo &amp; Cambridge</span>.
             </p>
 
             {/* CTA row */}
@@ -76,7 +76,7 @@ export function Hero() {
               </a>
               <button
                 onClick={() => scrollTo('contact')}
-                className="inline-flex items-center justify-center gap-2.5 bg-white/8 text-white font-semibold px-6 sm:px-8 py-4 rounded-xl text-sm sm:text-base border border-white/15 hover:bg-white/15 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer min-h-[48px]"
+                className="inline-flex items-center justify-center gap-2.5 bg-white text-[#0F1C35] font-semibold px-6 sm:px-8 py-4 rounded-xl text-sm sm:text-base border border-[#BFDBFE] hover:bg-[#EFF6FF] hover:border-[#2563EB]/40 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer min-h-[48px]"
               >
                 Get Free Quote
                 <ArrowRight size={17} />
@@ -89,12 +89,12 @@ export function Hero() {
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={13} fill="#2563EB" className="text-[#2563EB]" />
                 ))}
-                <span className="text-white/40 text-xs sm:text-sm ml-1">5.0 Google</span>
+                <span className="text-slate-400 text-xs sm:text-sm ml-1">5.0 Google</span>
               </div>
-              <div className="w-px h-4 bg-white/15 hidden sm:block" />
-              <span className="text-white/40 text-xs sm:text-sm">50+ Jobs Done</span>
-              <div className="w-px h-4 bg-white/15 hidden sm:block" />
-              <div className="flex items-center gap-1.5 text-white/40 text-xs sm:text-sm">
+              <div className="w-px h-4 bg-[#BFDBFE] hidden sm:block" />
+              <span className="text-slate-400 text-xs sm:text-sm">50+ Jobs Done</span>
+              <div className="w-px h-4 bg-[#BFDBFE] hidden sm:block" />
+              <div className="flex items-center gap-1.5 text-slate-400 text-xs sm:text-sm">
                 <Clock size={12} className="text-[#2563EB]" />
                 24/7 Emergency
               </div>
@@ -110,15 +110,15 @@ export function Hero() {
               { label: 'EV Charging', check: true },
               { label: 'Emergency 24/7', check: true },
             ].map(item => (
-              <div key={item.label} className="flex items-center gap-3 bg-white/5 border border-white/8 rounded-xl px-4 py-3 hover:bg-white/10 hover:border-[#2563EB]/30 transition-all duration-200">
+              <div key={item.label} className="flex items-center gap-3 bg-white border border-[#DBEAFE] rounded-xl px-4 py-3 hover:bg-[#EFF6FF] hover:border-[#2563EB]/40 transition-all duration-200">
                 <CheckCircle size={16} className="text-[#2563EB] shrink-0" />
-                <span className="text-white/75 text-sm font-medium">{item.label}</span>
+                <span className="text-[#0F1C35] text-sm font-medium">{item.label}</span>
               </div>
             ))}
             <div className="bg-[#2563EB]/15 border border-[#2563EB]/25 rounded-xl px-4 py-4 mt-2">
               <p className="text-[#2563EB] text-xs font-semibold uppercase tracking-wider mb-1">Licensed By</p>
-              <p className="text-white text-sm font-bold">Electrical Safety Authority</p>
-              <p className="text-white/40 text-xs mt-1">Lic. #7018628 · #17006718</p>
+              <p className="text-[#0F1C35] text-sm font-bold">Electrical Safety Authority</p>
+              <p className="text-slate-400 text-xs mt-1">Lic. #7018628 · #17006718</p>
             </div>
           </div>
         </div>

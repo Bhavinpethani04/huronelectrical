@@ -63,15 +63,15 @@ export function FAQ() {
             </p>
 
             {/* Still have questions card */}
-            <div className="bg-[#050D1F] rounded-2xl p-5 sm:p-6 mt-2 sm:mt-6 relative overflow-hidden">
-              <div className="absolute inset-0 bg-blueprint-grid opacity-40" />
+            <div className="bg-[#EFF6FF] border border-[#BFDBFE] rounded-2xl p-5 sm:p-6 mt-2 sm:mt-6 relative overflow-hidden">
+              <div className="absolute inset-0 bg-blueprint-grid opacity-10" />
               <div className="relative">
                 <MessageCircle size={20} className="text-[#2563EB] mb-2.5 sm:mb-3" />
-                <p className="text-white font-bold text-sm mb-1">Still have questions?</p>
-                <p className="text-white/40 text-xs mb-4">We're happy to help — reach out any time.</p>
+                <p className="text-[#0F1C35] font-bold text-sm mb-1">Still have questions?</p>
+                <p className="text-slate-400 text-xs mb-4">We're happy to help — reach out any time.</p>
                 <button
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full bg-[#2563EB] text-white font-bold py-3.5 rounded-xl text-sm hover:bg-[#1D4ED8] transition-colors cursor-pointer shadow-md shadow-blue-500/30 min-h-[48px]"
+                  className="w-full bg-[#2563EB] text-white font-bold py-3.5 rounded-xl text-sm hover:bg-[#1D4ED8] transition-colors cursor-pointer shadow-md shadow-blue-500/20 min-h-[48px]"
                 >
                   Contact Us
                 </button>
