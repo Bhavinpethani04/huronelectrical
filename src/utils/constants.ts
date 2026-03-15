@@ -37,6 +37,7 @@ export const SERVICES: Service[] = [
     title: 'Residential Electrical',
     description: 'Complete home electrical services — from panel upgrades and outlet installation to full rewiring and safety inspections.',
     features: ['Panel upgrades & replacements', 'Outlet & switch installation', 'Full home rewiring', 'Electrical safety inspections'],
+    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 'commercial',
@@ -45,6 +46,7 @@ export const SERVICES: Service[] = [
     description: 'Reliable electrical solutions for offices, retail spaces, restaurants, and multi-unit buildings across Kitchener–Waterloo & Cambridge.',
     features: ['Commercial panel upgrades', 'Lighting systems & controls', 'Data & communication cabling', 'Code compliance work'],
     highlight: true,
+    image: 'https://images.unsplash.com/photo-1759542877886-39d81e8f2eee?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 'industrial',
@@ -52,6 +54,7 @@ export const SERVICES: Service[] = [
     title: 'Industrial Electrical',
     description: 'Heavy-duty electrical contracting for manufacturing plants, agricultural facilities, and industrial operations.',
     features: ['Motor controls & automation', '3-phase power systems', 'Machine wiring & installation', 'Preventive maintenance'],
+    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 'ev-charging',
@@ -59,6 +62,7 @@ export const SERVICES: Service[] = [
     title: 'EV Charger Installation',
     description: 'Level 1 and Level 2 EV charging station installation for homes and commercial properties. Future-proof your property.',
     features: ['Level 2 home chargers', 'Commercial EV stations', 'Load management systems', 'Utility rebate assistance'],
+    image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 'lighting',
@@ -66,6 +70,7 @@ export const SERVICES: Service[] = [
     title: 'Lighting Installation',
     description: 'Energy-efficient LED upgrades, pot lights, landscape lighting, and smart lighting systems for any space.',
     features: ['LED retrofit & upgrades', 'Pot light installation', 'Outdoor & landscape lighting', 'Smart home lighting'],
+    image: 'https://images.unsplash.com/photo-1763718476503-8d0b81eb1746?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 'emergency',
@@ -73,6 +78,7 @@ export const SERVICES: Service[] = [
     title: '24/7 Emergency Service',
     description: 'Electrical emergencies don\'t wait for business hours — and neither do we. Fast, reliable emergency response across Kitchener–Waterloo & Cambridge.',
     features: ['24/7 availability', 'Rapid response dispatch', 'Power outage restoration', 'Hazard identification & repair'],
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
   },
 ];
 

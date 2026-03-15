@@ -5,6 +5,7 @@ export interface Service {
   description: string;
   features: string[];
   highlight?: boolean;
+  image?: string;
 }
 
 export interface Testimonial {
