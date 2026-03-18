@@ -44,11 +44,23 @@ export function useFormValidation() {
       return;
     }
     setIsSubmitting(true);
-    // Simulate async submit
-    await new Promise(r => setTimeout(r, 1200));
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setFormData(EMPTY);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error ?? 'Something went wrong.');
+      }
+      setSubmitted(true);
+      setFormData(EMPTY);
+    } catch (err) {
+      setErrors({ name: err instanceof Error ? err.message : 'Failed to send. Please try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return { formData, errors, submitted, isSubmitting, handleChange, handleSubmit };
